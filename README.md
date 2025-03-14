@@ -26,12 +26,12 @@ Ensure you have the following installed:
 ### Steps to Deploy
 1. **Clone the repository**
    ```sh
-   git clone https://github.com/your-repo/nginx-token-proxy.git
+   git clone https://github.com/santiagovasquez/nginx-token-proxy.git
    cd nginx-token-proxy
    ```
 2. **Build and Start the Services**
    ```sh
-   docker-compose up -d --build
+   docker-compose up --build
    ```
 3. **Verify the Deployment**
    ```sh
