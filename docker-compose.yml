@@ -1,0 +1,18 @@
+networks:
+  traefik_network:
+    name: traefik_net
+    driver: bridge
+
+services:
+  nginx_service:
+    build:
+      context: .
+      dockerfile: Dockerfile  
+    ports:
+      - "8081:80"
+    volumes:
+      - ./conf/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./index.php:/var/www/html/index.php
+    networks:
+      - traefik_network
+    restart: always
